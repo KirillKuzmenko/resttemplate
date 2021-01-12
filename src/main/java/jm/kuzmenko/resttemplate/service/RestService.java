@@ -14,9 +14,10 @@ public class RestService {
 
     private String session = null;
 
-    public void getAllUser() {
+    public String getAllUser() {
         ResponseEntity<String> responseEntity = restTemplate.getForEntity(URL_API, String.class);
         session = responseEntity.getHeaders().get("Set-Cookie").get(0);
+        return session;
     }
 
     public String addUser(User user) {

@@ -13,7 +13,7 @@ public class ResttemplateApplication {
 
         RestService restService = new RestService();
 
-        restService.getAllUser();
+        System.out.println(restService.getAllUser());
         System.out.println(restService.addUser(new User(3L, "James", "Brown", 24)));
         System.out.println(restService.editUser(new User(3L, "Thomas", "Shelby", 24)));
         System.out.println(restService.deleteUser(3L));
